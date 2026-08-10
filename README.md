@@ -1,20 +1,24 @@
-# J.ONE GOLF PWA
+# JONE GOLF FINAL PWA
 
-확정 구조
-1. HOME — 사용자가 지정한 원본 이미지 + 프로필 요약
-2. LESSON & TOUR — 한 페이지
-3. BOOKING — 예약 신청
-4. ADMIN — 관리자 페이지
+GitHub/Vercel 업로드용 최종 패키지.
 
-관리자 데모 로그인
-- ID: admin
-- PW: 1234
+## 페이지
+HOME / PROFILE / LESSON / PROGRAM / TOUR / BOOKING
 
-현재 1차 구현은 localStorage 기반입니다.
-다음 실배포 단계에서는 Supabase 연결을 권장합니다:
-- 관리자 인증
-- 예약 데이터 실시간 저장
-- 여러 기기 동기화
-- 사진/콘텐츠 업로드 및 관리
+## 최종 확정 디자인 원본
+- HOME: assets/8585.png
+- PROFILE: assets/8586.png
+- LESSON: assets/8618.jpg
+- TOUR: assets/8626.png
+- BOOKING: assets/8662.png
 
-중요: `assets/home-hero.png`는 사용자가 지정한 원본 파일을 그대로 사용했습니다.
+사용자 제공/확정 이미지는 변형하지 않고 그대로 사용합니다.
+
+## 연락처 기준
+- Korea: 010-9424-7222
+- China: 18502157079
+- Email: jonegolf@qq.com
+
+## 배포
+이 폴더의 모든 파일과 assets 폴더를 GitHub 저장소의 루트에 업로드하고 Commit하면,
+연결된 Vercel이 자동 재배포합니다.

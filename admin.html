@@ -1,0 +1,26 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#060708"><title>Admin | J.ONE GOLF</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body><div class="shell">
+<header class="topbar"><span class="brand">J.ONE GOLF ADMIN</span><a href="index.html" class="page-kicker">고객 화면</a></header>
+<main>
+<section id="login-panel" class="login-wrap">
+<div class="login-card"><div class="eyebrow">ADMIN LOGIN</div><h1>관리자 로그인</h1>
+<form id="login-form"><label>아이디<input id="admin-id" value="admin"></label><label>비밀번호<input id="admin-pw" type="password" value="1234"></label><button class="primary">로그인</button></form>
+<p class="hint">현재는 데모 로그인입니다. 실제 배포 전 Supabase Auth로 교체합니다.</p></div></section>
+
+<section id="dashboard" class="hidden">
+<div class="admin-header"><div class="eyebrow">J.ONE GOLF ADMIN</div><h1>관리자 페이지</h1>
+<div class="admin-user"><div class="avatar">JG</div><div><strong>관리자님</strong><div class="sub">MASTER ADMIN</div></div></div>
+<div class="admin-stats"><div class="stat"><strong id="today-count">0</strong><span>오늘 예약</span></div><div class="stat"><strong id="booking-count">0</strong><span>전체 예약</span></div><div class="stat"><strong id="tour-count">0</strong><span>투어 항목</span></div></div>
+</div>
+<div class="admin-card"><h2>최근 예약 신청</h2><div id="admin-bookings"></div></div>
+<div class="admin-card"><h2>레슨 프로그램 관리</h2><div id="admin-lessons"></div>
+<form id="lesson-add-form" class="inline-form"><input name="title" placeholder="레슨명" required><input name="desc" placeholder="설명" required><button class="primary">항목 추가</button></form></div>
+<div class="admin-card"><h2>투어 일정 관리</h2><div id="admin-tours"></div>
+<form id="tour-add-form" class="inline-form"><input name="country" placeholder="국가" required><input name="title" placeholder="상품명" required><input name="price" placeholder="가격" required><button class="primary">일정 추가</button></form></div>
+</section>
+</main>
+<nav class="bottom-nav"><a href="index.html">HOME</a><a href="lesson-tour.html">LESSON & TOUR</a><a href="booking.html">BOOKING</a><a class="active" href="admin.html">ADMIN</a></nav>
+<script src="app.js"></script></div></body></html>

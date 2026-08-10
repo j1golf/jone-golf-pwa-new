@@ -1,0 +1,84 @@
+
+:root{
+  --bg:#060708; --panel:#0e1012; --panel2:#14171a; --text:#f7f4ee;
+  --muted:#a3a4a6; --gold:#d7a43b; --gold2:#f0c35b; --line:#3d321d;
+  --green:#53b56c; --blue:#4c9edf; --danger:#ce654e; --radius:16px;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif}
+body{margin:0;background:radial-gradient(circle at 50% -20%,#171a1d 0,#090a0b 38%,#050607 100%);min-height:100vh;padding-bottom:76px}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+img{display:block;max-width:100%}
+.shell{width:min(100%,520px);margin:auto;min-height:100vh;background:rgba(0,0,0,.08)}
+.topbar{
+  height:66px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:0 18px;background:rgba(5,6,7,.95);backdrop-filter:blur(12px);border-bottom:1px solid #202225
+}
+.brand{font-weight:900;letter-spacing:.08em;color:var(--gold2);font-size:18px}
+.menu{border:0;background:transparent;color:var(--gold2);font-size:25px;padding:4px 0}
+.page-kicker{color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:.12em}
+.hero{background:#000}
+.hero img{width:100%;height:auto}
+.home-summary{padding:18px 18px 8px}
+.home-summary h1{font-size:24px;margin:0 0 10px}
+.home-summary p{margin:6px 0;color:#d7d4cd;font-size:13px;line-height:1.6}
+.motto{margin-top:14px;padding:12px 14px;border-left:3px solid var(--gold);background:#0c0d0e;color:var(--gold2);font-size:12px;font-weight:800}
+.section{padding:22px 18px}
+.section+.section{border-top:1px solid #202225}
+.eyebrow{color:var(--gold2);font-weight:900;letter-spacing:.08em;font-size:14px;margin-bottom:6px}
+h1,h2{margin:0}
+h1{font-size:26px}
+h2{font-size:20px}
+.sub{color:var(--muted);font-size:12px;line-height:1.55;margin-top:6px}
+.stack{display:grid;gap:9px;margin-top:16px}
+.lesson-card,.tour-card,.admin-row,.stat,.booking-card{
+  border:1px solid var(--line);background:linear-gradient(145deg,#121416,#0b0c0d);border-radius:13px
+}
+.lesson-card{padding:13px 14px;display:grid;grid-template-columns:36px 1fr 18px;gap:10px;align-items:center}
+.lesson-icon{width:34px;height:34px;border:1px solid #5a461f;border-radius:50%;display:grid;place-items:center;color:var(--gold2)}
+.lesson-card strong{display:block;color:#f1eee8;font-size:14px}
+.lesson-card small{color:var(--muted);font-size:11px}
+.arrow{color:var(--gold2)}
+.tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}
+.tour-card{min-height:110px;padding:13px;display:flex;flex-direction:column;justify-content:flex-end;background:
+ linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.72)),linear-gradient(145deg,#1b2225,#0a0c0d)}
+.tour-card strong{color:#fff;font-size:14px}.tour-card small{color:#c7c8c9;font-size:10px;margin-top:4px}
+.primary{width:100%;border:0;border-radius:11px;padding:14px 16px;background:linear-gradient(90deg,#d09a32,#f0c45b);color:#17110a;font-weight:900}
+.secondary{width:100%;border:1px solid #4d3b1e;border-radius:11px;padding:12px 16px;background:#111315;color:var(--gold2);font-weight:800}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.tab{border:1px solid #2b2d30;background:#121416;color:#d4d4d4;border-radius:9px;padding:11px}
+.tab.active{border-color:transparent;background:linear-gradient(90deg,#d09a32,#f0c45b);color:#17110a;font-weight:900}
+form{display:grid;gap:10px}
+label{display:grid;gap:5px;color:#d5d2cc;font-size:11px}
+input,select,textarea{width:100%;border:1px solid #2c2f31;background:#111315;color:#fff;border-radius:10px;padding:12px 13px;outline:none}
+textarea{resize:vertical;min-height:100px}
+.hint{font-size:10px;color:#85878a;text-align:center;line-height:1.5}
+.bottom-nav{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,520px);height:70px;z-index:60;
+  display:grid;grid-template-columns:repeat(4,1fr);background:rgba(5,6,7,.97);border-top:1px solid #242629;backdrop-filter:blur(12px)
+}
+.bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#a5a7aa;font-size:9px}
+.bottom-nav a::before{font-size:18px}
+.bottom-nav a[href="index.html"]::before{content:"⌂"}
+.bottom-nav a[href="lesson-tour.html"]::before{content:"◉"}
+.bottom-nav a[href="booking.html"]::before{content:"▣"}
+.bottom-nav a[href="admin.html"]::before{content:"⚙"}
+.bottom-nav a.active{color:var(--gold2)}
+.admin-header{padding:22px 18px 4px}
+.admin-user{display:flex;align-items:center;gap:12px;margin-top:14px}
+.avatar{width:56px;height:56px;border-radius:50%;border:1px solid var(--line);background:linear-gradient(145deg,#1c1f22,#0c0d0f);display:grid;place-items:center;color:var(--gold2);font-weight:900}
+.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.stat{padding:12px 8px;text-align:center}
+.stat strong{display:block;color:var(--gold2);font-size:22px}.stat span{color:var(--muted);font-size:9px}
+.admin-card{margin:14px 18px;padding:16px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#101214,#0a0b0c)}
+.admin-card h2{font-size:16px;margin-bottom:10px}
+.admin-row{padding:11px 12px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin-top:8px}
+.admin-row strong{font-size:12px}.admin-row small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.badge{display:inline-block;padding:4px 7px;border-radius:999px;font-size:9px;background:#15231a;color:#78cf8c}
+.delete{border:1px solid #5a2d24;background:#1c0e0b;color:#e58d78;border-radius:8px;padding:7px 8px}
+.inline-form{margin-top:12px}
+.login-wrap{padding:28px 18px}
+.login-card{padding:20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#111315,#090a0b)}
+.hidden{display:none!important}
+@media(min-width:700px){body{padding-bottom:0}.bottom-nav{position:sticky;transform:none;left:auto;margin:auto}.shell{box-shadow:0 0 40px rgba(0,0,0,.4)}}
